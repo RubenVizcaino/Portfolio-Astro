@@ -1,0 +1,40 @@
+---
+const Proyectos = [
+	{
+		name: "Ecommerce Fullstack Template",
+		image: "/FrontTemplateShop.png",
+		description:
+			"Proyecto base e-commerce con arquitectura limpia: Angular en el frontend, Spring Boot + JPA + MariaDB en el backend, y Lombok para simplificar el modelo de datos. Basado en patrón Controller–Service–Repository para mantener la separación de responsabilidades. Contectado a una API REST para operaciones CRUD..",
+		url: "https://github.com/stars/RubenVizcaino/lists/template",
+	},
+];
+---	
+    
+    <section title="Proyectos" class="mt-50 flex grid gap-6 md-cols-1">
+		{
+			Proyectos.map((proyecto) => (
+				<article class="flex max-w-5xl">
+					<a class="mb-2 xl:mb-0 transition hover:scale-110">
+						<img class=" w-200 rounded " src={proyecto.image} />
+					</a>
+
+					<div class="flex flex-col justify-center items-center w-full">
+						<h2 class="mb-2 text-2xl font-bold leading-tight text-center flex justify-center w-full">
+							{proyecto.name}
+						</h2>
+						<h3 class="mb-2 text-s prose prose-invert leading-tight text-center flex flex-col justify-center w-full">
+							{proyecto.description}
+						</h3>
+						<a
+							class="inline-block outline-none cursor-pointer text-[14px] leading-none rounded-full transition-all duration-300 border border-transparent tracking-wider uppercase
+			whitespace-normal font-bold text-center px-12 py-[17px] text-white bg-[#4e4e4c] h-12 hover:scale-105 hover:bg-[#25251f] w-50 gap-4"
+							href={proyecto.url}
+							target="_blank"
+						>
+							Ir a GitHub
+						</a>
+					</div>
+				</article>
+			))
+		}
+	</section>

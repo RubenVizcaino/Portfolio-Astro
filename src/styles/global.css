@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+html{
+    @apply bg-gradient-to-b from-[#5c5c5b] to-[#161613] ;
+    @apply text-white;
+}
+    
+body {
+    @apply  grid place-content-center p-20;
+}
+
+body>div {
+    @apply container;
+}
+

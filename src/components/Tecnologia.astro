@@ -1,0 +1,46 @@
+---
+const Tecnologias = [
+	{
+		name: "Java",
+		image: "/java.svg",
+	},
+	{
+		name: "TypeScript",
+		image: "/typescript.svg",
+	},
+	{
+		name: "Angular",
+		image: "/angular.svg",
+	},
+	{
+		name: "SpringBoot",
+		image: "/springboot.svg",
+	},
+	{
+		name: "Astro",
+		image: "/astro.svg",
+	},
+	{
+		name: "JavaScript",
+		image: "/javascript.svg",
+	},
+];
+---	
+    
+    <section title="Tecnologías" class="mt-50 flex grid gap-6 md:grid-cols-3">
+		{
+			Tecnologias.map((tecnologia) => (
+				<article class="flex">
+					<a class="mb-2 xl:mb-0 transition hover:scale-110">
+						<img class="mr-5 w-20 rounded" src={tecnologia.image} />
+					</a>
+
+					<div class="flex flex-col justify-center">
+						<h2 class="mb-2 text-2xl font-bold leading-tight">
+							{tecnologia.name}
+						</h2>
+					</div>
+				</article>
+			))
+		}
+	</section>
