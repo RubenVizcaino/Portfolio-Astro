@@ -1,0 +1,42 @@
+---
+const correo = "rvrodriguez004@gmail.com";
+---
+
+<div class="flex justify-center mt-6 flex-col items-center">
+  <button
+    id="boton-copiar"
+    class="flex items-center justify-center outline-none cursor-pointer text-[14px] leading-none rounded-full transition-all duration-300 border border-transparent tracking-wider uppercase whitespace-normal font-bold text-center px-0 py-[17px] text-white bg-[#4e4e4c] h-12 hover:scale-105 hover:bg-[#25251f] w-96 gap-4"
+    style="min-width: 24rem;"
+  >
+    <span class="w-full flex items-center justify-center gap-2 font-bold text-base uppercase">
+      {correo}
+      <span class="material-symbols-outlined text-xl">content_copy</span>
+    </span>
+  </button>
+
+  <span
+    id="mensaje-copiado"
+    class="text-green-400 mt-2 opacity-0 transition-opacity duration-500 pointer-events-none"
+  >
+    ¡Correo copiado al portapapeles!
+  </span>
+</div>
+
+<script>
+  const boton = document.getElementById("boton-copiar");
+  const mensaje = document.getElementById("mensaje-copiado");
+
+  if (boton && mensaje) {
+    boton.addEventListener("click", () => {
+      navigator.clipboard.writeText("rvrodriguez004@gmail.com").then(() => {
+        mensaje.classList.remove("opacity-0");
+        mensaje.classList.add("opacity-100");
+
+        setTimeout(() => {
+          mensaje.classList.remove("opacity-100");
+          mensaje.classList.add("opacity-0");
+        }, 1000 );
+      });
+    });
+  }
+</script>
