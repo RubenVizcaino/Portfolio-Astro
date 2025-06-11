@@ -28,12 +28,12 @@ const Tecnologias = [
 ---	
     
 <section title="Tecnologías" class="mt-20 flex justify-center w-full">
-	<div class="grid grid-cols-3 gap-x-10 gap-y-10">
+	<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6">
 	  {
 		Tecnologias.map((tecnologia) => (
-		  <article class="flex items-center justify-center space-x-3">
-			<img class=" mb-2 xl:mb-0 transition hover:scale-110 w-20" src={tecnologia.image} alt={tecnologia.name} />
-			<h2 class="text-xl font-bold">{tecnologia.name}</h2>
+		  <article class="flex items-center justify-center space-x-3 sm:space-x-2">
+			<img class="mb-2 xl:mb-0 transition hover:scale-110 w-10 sm:w-20" src={tecnologia.image} alt={tecnologia.name} />
+			<h2 class="text-base font-bold sm:text-xl">{tecnologia.name}</h2>
 		  </article>
 		))
 	  }
