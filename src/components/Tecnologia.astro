@@ -27,20 +27,17 @@ const Tecnologias = [
 ];
 ---	
     
-    <section title="Tecnologías" class="mt-50 flex grid gap-6 md:grid-cols-3">
-		{
-			Tecnologias.map((tecnologia) => (
-				<article class="flex">
-					<a class="mb-2 xl:mb-0 transition hover:scale-110">
-						<img class="mr-5 w-20 rounded" src={tecnologia.image} />
-					</a>
-
-					<div class="flex flex-col justify-center">
-						<h2 class="mb-2 text-2xl font-bold leading-tight">
-							{tecnologia.name}
-						</h2>
-					</div>
-				</article>
-			))
-		}
-	</section>
+<section title="Tecnologías" class="mt-20 flex justify-center w-full">
+	<div class="grid grid-cols-3 gap-x-10 gap-y-10">
+	  {
+		Tecnologias.map((tecnologia) => (
+		  <article class="flex items-center justify-center space-x-3">
+			<img class=" mb-2 xl:mb-0 transition hover:scale-110 w-20" src={tecnologia.image} alt={tecnologia.name} />
+			<h2 class="text-xl font-bold">{tecnologia.name}</h2>
+		  </article>
+		))
+	  }
+	</div>
+  </section>
+  
+  

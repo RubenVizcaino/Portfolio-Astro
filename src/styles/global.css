@@ -2,16 +2,14 @@
 @plugin "@tailwindcss/typography";
 
 
-html{
-    @apply bg-gradient-to-b from-[#5c5c5b] to-[#161613] ;
+html {
+    @apply bg-gradient-to-b from-[#5c5c5b] to-[#161613];
     @apply text-white;
 }
-    
+
+
+
+
 body {
-    @apply  grid place-content-center p-20;
+    @apply min-h-screen flex flex-col;
 }
-
-body>div {
-    @apply container;
-}
-
