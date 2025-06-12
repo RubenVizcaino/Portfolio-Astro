@@ -3,7 +3,7 @@
 
 
 html {
-    @apply bg-gradient-to-b from-[#5c5c5b] to-[#161613];
+    @apply bg-gradient-to-b from-gray-600 via-gray-800 to-gray-950;
     @apply text-white;
 }
 
