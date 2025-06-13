@@ -1,6 +1,6 @@
 ---
 const Redes = [
-	{ name: "Descargar CV", url: "" },
+	{ name: "Descargar CV", url: "CV_Ruben_Vizcaino_Rodriguez.pdf" },
 	{ name: "GitHub", url: "https://github.com/RubenVizcaino" },
 	{
 		name: "LinkedIn",
@@ -11,54 +11,56 @@ const Redes = [
 import CopiarCorreo from "./CopiarCorreo.astro";
 ---
 
-<div class="w-full flex flex-col items-center  px-6 mt-20">
+<div class="w-full flex flex-col items-center px-6 mt-20">
 	<!-- Redes -->
 	<div title="Redes" class="flex justify-center flex-wrap gap-6">
-	  {Redes.map((red) => (
-		<a href={red.url} target="_blank">
-		  <button
-			class={`inline-block outline-none text-[14px] leading-none rounded-full transition-all duration-300 border border-transparent tracking-wider uppercase whitespace-normal font-bold text-center px-12 py-[17px] h-12 w-55 gap-4 ${
-			  red.name === "Descargar CV"
-				? "bg-[#25251f] disabled text-[#55554e]"
-				: "bg-[#25251f] hover:scale-105 hover:bg-[#4e4e4c] cursor-pointer text-white"
-			}`}
-		  >
-			{red.name}
-		  </button>
-		</a>
-	  ))}
+		{
+			Redes.map((red) => (
+				<a
+					href={red.url}
+					target="_blank"
+					{...(red.name === "Descargar CV" ? { download: true } : {})}
+				>
+					<button
+						class={`inline-block outline-none text-[14px] leading-none rounded-full transition-all duration-300 border border-transparent tracking-wider uppercase whitespace-normal font-bold text-center px-12 py-[17px] h-12 w-55 gap-4 ${"bg-[#25251f] hover:scale-105 hover:bg-[#4e4e4c] cursor-pointer text-white"}`}
+					>
+						{red.name}
+					</button>
+				</a>
+			))
+		}
 	</div>
-  
+
 	<!-- Botón de Correo -->
 	<CopiarCorreo />
-  
+
 	<!-- Descripción -->
 	<div class="flex gap-12 flex-wrap justify-center items-center">
-	  <aside
-		title="Foto"
-		class="flex flex-col items-center gap-4 hover:scale-110 duration-300"
-	  >
-		<img src="ruben.jpg" class="rounded-4xl w-72 h-auto" />
-	  </aside>
-	  <main title="Breve Descripción" class="max-w-3xl text-center">
-		<h1>
-		  <span class="text-6xl font-bold">Rubén Vizcaíno</span>
-		  <span class="text-2xl font-bold mt-2 block"
-			>Desarrollador Web Fullstack</span
-		  >
-		</h1>
-		<h2 class="prose prose-invert text-lg font-medium mt-5">
-		  Hola! Me llamo Rubén Vizcaíno, soy desarrollador web Fullstack. Empecé
-		  mi viaje en 2022 y desde entonces he estado aprendiendo y trabajando en
-		  proyectos interesantes. Me encanta crear aplicaciones web que sean
-		  rápidas, eficientes y fáciles de usar. Tengo experiencia en una
-		  variedad de tecnologías, incluyendo HTML, CSS, JavaScript, Angular,
-		  Astro, etc. Siempre estoy buscando nuevas oportunidades para aprender y
-		  crecer como desarrollador. Si estás interesado en trabajar conmigo o
-		  simplemente quieres charlar sobre tecnología, no dudes en contactarme.
-		  Estoy emocionado de ver qué podemos crear juntos.
-		</h2>
-	  </main>
+		<aside
+			title="Foto"
+			class="flex flex-col items-center gap-4 hover:scale-110 duration-300"
+		>
+			<img src="ruben.jpg" class="rounded-4xl w-72 h-auto" />
+		</aside>
+		<main title="Breve Descripción" class="max-w-3xl text-center">
+			<h1>
+				<span class="text-6xl font-bold">Rubén Vizcaíno</span>
+				<span class="text-2xl font-bold mt-2 block"
+					>Desarrollador Web Fullstack</span
+				>
+			</h1>
+			<h2 class="prose prose-invert text-lg font-medium mt-5">
+				Hola! Me llamo Rubén Vizcaíno, soy desarrollador web Fullstack.
+				Empecé mi viaje en 2022 y desde entonces he estado aprendiendo y
+				trabajando en proyectos interesantes. Me encanta crear
+				aplicaciones web que sean rápidas, eficientes y fáciles de usar.
+				Tengo experiencia en una variedad de tecnologías, incluyendo
+				HTML, CSS, JavaScript, Angular, Astro, etc. Siempre estoy
+				buscando nuevas oportunidades para aprender y crecer como
+				desarrollador. Si estás interesado en trabajar conmigo o
+				simplemente quieres charlar sobre tecnología, no dudes en
+				contactarme. Estoy emocionado de ver qué podemos crear juntos.
+			</h2>
+		</main>
 	</div>
-  </div>
-  
+</div>
