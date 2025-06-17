@@ -21,6 +21,7 @@
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.16"
+    "@tailwindcss/typography": "^0.5.16",
+    "oxlint": "^1.1.0"
   }
 }
