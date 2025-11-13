@@ -1,49 +1,47 @@
 ---
 const Proyectos = [
-    {
-        name: "Ecommerce Fullstack Template",
-        image: "/FrontTemplateShop.png",
-        description:
-            "Proyecto base e-commerce con arquitectura limpia: Angular en el frontend, Spring Boot + JPA + MariaDB en el backend, y Lombok para simplificar el modelo de datos. Basado en patrón Controller–Service–Repository para mantener la separación de responsabilidades. Contectado a una API REST para operaciones CRUD.",
-        url: "https://github.com/stars/RubenVizcaino/lists/template",
-    },{
-        name: "User Login Registration with PHP",
-        image: "/login.png",
-        description:
-        "Este es un Proyecto base de Login y Registro desarrollado completamente con PHP en el backend y una base de datos MySQL para la persistencia de datos. Es una implementación bastante simple y funcional que incluye los procesos fundamentales de CRUD (Crear, Leer, Actualizar y Eliminar) aplicados a la gestión de usuarios, lo que lo convierte en un excelente punto de partida para entender la autenticación básica y la interacción con bases de datos en entornos web con PHP.",
-        url: "https://github.com/RubenVizcaino/user-login-registration-php",
-
-
-    }
+	{
+		name: "Ecommerce Fullstack Template",
+		image: "/FrontTemplateShop.png",
+		description:
+			"Proyecto base e-commerce con arquitectura limpia: Angular en el frontend, Spring Boot + JPA + MariaDB en el backend, y Lombok para simplificar el modelo de datos. Basado en patrón Controller–Service–Repository para mantener la separación de responsabilidades. Contectado a una API REST para operaciones CRUD.",
+		url: "https://github.com/stars/RubenVizcaino/lists/template",
+	},
+	{
+		name: "User Login Registration with PHP",
+		image: "/login.png",
+		description:
+			"Este es un Proyecto base de Login y Registro desarrollado completamente con PHP en el backend y una base de datos MySQL para la persistencia de datos. Es una implementación bastante simple y funcional que incluye los procesos fundamentales de CRUD (Crear, Leer, Actualizar y Eliminar) aplicados a la gestión de usuarios, lo que lo convierte en un excelente punto de partida para entender la autenticación básica y la interacción con bases de datos en entornos web con PHP.",
+		url: "https://github.com/RubenVizcaino/user-login-registration-php",
+	},
 ];
 ---
 
 <div class="w-full text-4xl font-bold text-center mt-40">Mis Proyectos</div>
 <section title="Proyectos" class="mt-10 flex flex-col items-center gap-10">
-    {
-        Proyectos.map((proyecto) => (
-            <article class="mb-10 flex flex-col md:flex-row max-w-5xl w-full items-center md:items-start md:justify-center">
-                <a class="mb-2 xl:mb-0 transition hover:scale-110 md:mr-40 ">
-                    <img class="w-70 md:w-80 rounded" src={proyecto.image} />
-                </a>
-
-                <div class="flex flex-col justify-center items-center w-full max-w-md">
-                    <h2 class="mb-2 text-2xl font-bold leading-tight text-center flex justify-center w-full">
-                        {proyecto.name}
-                    </h2>
-                    <h3 class="mb-2 text-s prose prose-invert leading-tight text-center flex flex-col justify-center w-full">
-                        {proyecto.description}
-                    </h3>
-                    <a
-                        class="inline-block outline-none cursor-pointer text-[14px] leading-none rounded-full transition-all duration-300 border border-transparent tracking-wider uppercase
+	{
+		Proyectos.map((proyecto) => (
+			<article class="mb-10 flex flex-col md:flex-row max-w-5xl w-full items-center md:items-start md:justify-center">
+				<a class="mb-2 xl:mb-0 transition hover:scale-110 md:mr-40 ">
+					<img class="w-70 md:w-80 rounded" src={proyecto.image} />   
+				</a>
+				<div class="flex flex-col justify-center items-center w-full max-w-md">
+					<h2 class="mb-2 text-2xl font-bold leading-tight text-center flex justify-center w-full">
+						                        {proyecto.name}                 
+					</h2>
+					<h3 class="mb-2 text-s prose prose-invert leading-tight text-center flex flex-col justify-center w-full">
+						                        {proyecto.description}         
+					</h3>
+					<a
+						class="inline-block outline-none cursor-pointer text-[14px] leading-none rounded-full transition-all duration-300 border border-transparent tracking-wider uppercase
             whitespace-normal font-bold text-center px-12 py-[17px] text-white bg-[#4e4e4c] h-12 hover:scale-105 hover:bg-[#25251f] w-50 gap-4"
-                        href={proyecto.url}
-                        target="_blank"
-                    >
-                        Ir a GitHub
-                    </a>
-                </div>
-            </article>
-        ))
-    }
+						href={proyecto.url}
+						target="_blank"
+					>
+						                        Ir a GitHub                
+					</a>
+				</div>
+			</article>
+		))
+	}
 </section>
