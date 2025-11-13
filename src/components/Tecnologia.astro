@@ -4,21 +4,35 @@ const Tecnologias = [
 		name: "Java",
 		image: "/java.svg",
 	},
+
+	{
+		name: "MySQL",
+		image: "/mysql.svg",
+	},
+	{
+		name: "PHP",
+		image: "/php.svg",
+	},
 	{
 		name: "TypeScript",
 		image: "/typescript.svg",
 	},
 	{
-		name: "Angular",
-		image: "/angular.svg",
-	},	
-	{
 		name: "Astro",
 		image: "/astro.svg",
 	},
 	{
+		name: "Angular",
+		image: "/angular.svg",
+	},
+
+	{
 		name: "SpringBoot",
 		image: "/springboot.svg",
+	},
+	{
+		name: "Python",
+		image: "/python.svg",
 	},
 
 	{
@@ -26,19 +40,31 @@ const Tecnologias = [
 		image: "/javascript.svg",
 	},
 ];
----	
-    
+---
+
 <section title="Tecnologías" class="mt-20 flex justify-center w-full">
 	<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6">
-	  {
-		Tecnologias.map((tecnologia) => (
-		  <article class="flex items-center justify-center space-x-3 sm:space-x-2">
-			<img class="mb-2 xl:mb-0 transition hover:scale-110 w-10 sm:w-20" src={tecnologia.image} alt={tecnologia.name} />
-			<h2 class="text-base font-bold sm:text-xl">{tecnologia.name}</h2>
-		  </article>
-		))
-	  }
+		{
+			Tecnologias.map((tecnologia) => (
+				<article class="flex items-center space-x-3 sm:space-x-4">
+					                   {" "}
+					<div class="flex items-center justify-center w-10 sm:w-20">
+						                       {" "}
+						<img
+							class="transition hover:scale-110 w-10 sm:w-16"
+							src={tecnologia.image}
+							alt={tecnologia.name}
+						/>
+						                   {" "}
+					</div>
+					                   {" "}
+					<h2 class="text-base font-bold sm:text-xl w-32">
+						                        {tecnologia.name}               
+						   {" "}
+					</h2>
+					               {" "}
+				</article>
+			))
+		}
 	</div>
-  </section>
-  
-  
+</section>
